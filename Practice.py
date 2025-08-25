@@ -1,7 +1,17 @@
+
 '''import platform 
 
 # printing the Architecture of the OS
 print("[+] Architecture:", platform.architecture()[0])
+
+import platform
+
+# printing the Architecture of the OS
+print("[+] Architecture :", platform.architecture()[0])
+
+# Displaying the machine
+print("[+] Machine :", platform.machine())
+
 
 # printing the Operating System release information
 print("[+] Operating System Release :", platform.release())
@@ -20,6 +30,7 @@ print("[+] Platform :", platform.platform())
 
 # This will print the processor information
 print("[+] Processor :",platform.processor())
+
 print("[+] MAchne:", platform.machine)
 # printing the Operating System release information
 print("[+] Operating System Release :", platform.release())
@@ -45,3 +56,10 @@ import psutil
 # Using the psutil library to get the boot time of the system
 boot_time = datetime.fromtimestamp(psutil.boot_time())
 print("[+] System Boot Time :", boot_time)
+
+
+
+
+
+
+
