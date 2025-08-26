@@ -105,6 +105,7 @@ print(f"[+] Total CPU Usage : {psutil.cpu_percent()}%")
 
 
 
+'''
 
 # reading the cpuinfo file to print the name of
 # the CPU present
@@ -115,4 +116,3 @@ cpuinfo = [x.strip().split(":")[1] for x in file_info if "model name" in x]
 for index, item in enumerate(cpuinfo):
     print("[+] Processor " + str(index) + " : " + item)
     
-'''
