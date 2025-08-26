@@ -49,7 +49,7 @@ print("[+] Platform :", platform.platform())
 
 # This will print the processor information
 print("[+] Processor :",platform.processor())
-'''
+
 from datetime import datetime
 import psutil
 
@@ -57,9 +57,30 @@ import psutil
 boot_time = datetime.fromtimestamp(psutil.boot_time())
 print("[+] System Boot Time :", boot_time)
 
+# getting thesystem up time from the uptime file at proc directory
+with open("/proc/uptime", "r") as f:
+        uptime = f.read().split(" ")[0].strip()
+
+        uptime = int(float(uptime))
+        uptime_hours = uptime // 3600
+        uptime_minutes = (uptime % 3600) // 60
+        print("[+] System Uptime : " + str(uptime_hours) + ":" + str(uptime_minutes) + " hours")
 
 
 
+import os
+
+pids = []
+for subdir in os.listdir('/proc'):
+        if subdir.isdigit():
+                    pids.append(subdir)
+                    print('Total number of processes : {0}'.format(len(pids)))
 
 
+'''
 
+import pwd
+
+users = pwd.getpwall()
+for user in users:
+        print(user.pw_name, user.pw_shell)
