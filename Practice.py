@@ -77,10 +77,11 @@ for subdir in os.listdir('/proc'):
                     print('Total number of processes : {0}'.format(len(pids)))
 
 
-'''
+
 
 import pwd
 
 users = pwd.getpwall()
 for user in users:
         print(user.pw_name, user.pw_shell)
+'''
